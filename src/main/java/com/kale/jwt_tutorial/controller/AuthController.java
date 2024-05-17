@@ -8,7 +8,6 @@ import com.kale.jwt_tutorial.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,14 +20,12 @@ import java.util.Collections;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    private AuthenticationManager authenticationManager;
     private AppUserRepository appUserRepository;
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;
     @Autowired
-    public AuthController(AuthenticationManager authenticationManager, AppUserRepository appUserRepository,
+    public AuthController(AppUserRepository appUserRepository,
                           RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
-        this.authenticationManager = authenticationManager;
         this.appUserRepository = appUserRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
