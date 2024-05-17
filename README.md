@@ -1,1 +1,1 @@
-You can take a look this article to understand better how this project works and what it is:
+You can take a look this article to understand better how this project works and what it is: https://medium.com/@azizkale/jwt-in-spring-security-6-with-database-connection-without-websecurityconfigureradapter-e74344196d11
